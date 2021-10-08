@@ -19,6 +19,7 @@ export default function Home() {
 
 
       <main className="flex flex-col items-center justify-center flex-1 w-full px-20 text-center">
+        <Table />
       <SideBar activitiesArray={activitiesArray} test1={test1} test2={test2}/>
       </main>
     </div>

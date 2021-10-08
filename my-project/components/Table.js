@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from '../pages/Index.module.css'
 
 function Table() {
 	return (
