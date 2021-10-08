@@ -1,22 +1,17 @@
 import React from 'react';
+import { BeakerIcon } from "@heroicons/react/solid"
 
-function SideBar() {
+function SideBar({activitiesArray, test1, test2}) {
+	console.log(activitiesArray);
 	return (
 		<div className="aside">
 			<div className="activities">
-				<p>Study</p>
-				<p>Eat</p>
-				<p>Travel</p>
-				<p>Sports</p>
-				<p>Gaming</p>
-				<p>Tv</p>
-				<p>Chill</p>
-				<p>Friends</p>
-				<p>Family</p>
-				<p>Pray</p>
-				<p>Work</p>
-				<p>Sleep</p>
-				<p>I'm blank</p>
+			</div>
+			<div className="hobbie">
+				{activitiesArray.map((acts) => <p>{acts}</p>
+				)}
+				<p>{test1}</p>
+				<p>{test2}</p>
 			</div>
 		</div>
 	);
