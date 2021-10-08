@@ -1,0 +1,46 @@
+.table {
+    width: 900px;
+    /* background-color: #16132b; */
+    /* border-spacing: 40px; */
+}
+
+.caption {
+    text-align: left;
+    width: 300px;
+    font-weight: 700;
+    font-size: large;
+}
+
+.th,
+.td {
+    text-align: left;
+}
+
+.table,
+.th,
+.td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+.th,
+.td {
+    padding: 10px;
+}
+
+.tr:nth-child(even) {
+    background-color: #282346;
+}
+
+.tr:nth-child(odd) {
+    background-color: #ddd;
+}
+
+/* Sidebar CSS */
+
+.aside {
+    background-color: aqua;
+    margin-top: 25px;
+    margin-left: 25px;
+    /* padding: 70px; */
+}
