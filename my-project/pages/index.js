@@ -5,21 +5,6 @@ import Tracking from '../components/Tracking';
 import Remarks from '../components/Remarks';
 
 export default function Home() {
-	let activitiesArray = [
-		'Study',
-		'Eat',
-		'Travel',
-		'Sports',
-		'Gaming',
-		'Tv',
-		'Chill',
-		'Friends',
-		'Family',
-		'Pray',
-		'Work',
-		'Sleep',
-		'Blank',
-	];
   let eleven = `${11}:${45}`
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -30,9 +15,7 @@ export default function Home() {
        
 			<main className="flex items-center justify-center flex-1 w-full px-20 text-center flex-raw">
 				<Table />
-				<SideBar
-					activitiesArray={activitiesArray}
-				/>
+				<SideBar />
 			</main>
 
 			<div className="flex section display ">
