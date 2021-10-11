@@ -6,7 +6,7 @@ function Remarks({ subject, remark }) {
 			<p className="font-bold">Subject: {subject}</p>
 			<p>
 				<i>
-					<p className="font-bold">Remarks:</p> {remark}
+					<p className="font-bold">Remarks: {remark}</p>
 				</i>
 			</p>
 		</div>
