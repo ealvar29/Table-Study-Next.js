@@ -28,11 +28,11 @@ export default function Home() {
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen py-2">
 			<Head>
-				<title>Create Next App</title>
+				<title>This is the Next.js Table Project</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<main className="flex flex-raw items-center justify-center flex-1 w-full px-20 text-center">
+			<main className="flex items-center justify-center flex-1 w-full px-20 text-center flex-raw">
 				<Table />
 				<SideBar
 					activitiesArray={activitiesArray}
@@ -41,7 +41,7 @@ export default function Home() {
 				/>
 			</main>
 
-			<div className="section display flex ">
+			<div className="flex section display ">
 				<div className="color bg-red-600 p-2 m-0.5">
 					<Tracking day="Monday" time={'11:45'} subject="Math" />
 				</div>
