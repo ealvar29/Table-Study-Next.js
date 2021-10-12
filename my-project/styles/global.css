@@ -13,6 +13,7 @@ caption {
 
 th,
 td {
+    color: #ddd;
     text-align: left;
 }
 
@@ -29,18 +30,52 @@ td {
 }
 
 tr:nth-child(even) {
-    background-color: #282346;
+    background-color: #271c66;
 }
 
 tr:nth-child(odd) {
-    background-color: #ddd;
+    background-color: #2e1c94;
 }
+
 
 /* Sidebar CSS */
 
 .aside {
-    background-color: aqua;
+    width: 500px;
+    /* background-color: aqua; */
     margin-top: 25px;
     margin-left: 25px;
-    /* padding: 70px; */
+}
+
+.hobbie {
+    /* background-color: red; */
+}
+
+.activities {
+    display: flex;
+    flex-direction: column;
+    /* padding: 20px; */
+    color: rgb(58, 55, 55);
+    /* background-color: green; */
+}
+
+.acts {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+
+.icon {
+    padding-right: 30px;
+}
+
+.tracking {
+    /* background-color: blue; */
+}
+
+.remarking {
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
 }
