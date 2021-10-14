@@ -109,7 +109,7 @@ function SideBar() {
 			icon: (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					className="h-6 w-6"
+					className="w-6 h-6"
 					fill="none"
 					viewBox="0 0 24 24"
 					stroke="currentColor"
@@ -251,16 +251,6 @@ function SideBar() {
 		// 'Blank',
 	];
 
-	let form = () => {
-		return (
-			<form className="add-activity">
-				<input type="checkbox" id="hide" />
-				<label htmlFor="hide">Hide all activities</label>
-				<input type="text" placeholder="Add activity" />
-			</form>
-		);
-	};
-
 	return (
 		<div className="aside">
 			<div className="activities">
@@ -271,10 +261,6 @@ function SideBar() {
 							<p>{acts.activity}</p>
 						</div>
 					))}
-					<div>
-						{form}
-						<h1>Blank</h1>
-					</div>
 				</div>
 			</div>
 		</div>

@@ -3,6 +3,7 @@ import Table from '../components/Table';
 import SideBar from '../components/Sidebar';
 import Tracking from '../components/Tracking';
 import Remarks from '../components/Remarks';
+import { Form } from '../components/Form';
 
 export default function Home() {
 	let eleven = `${11}:${45}`;
@@ -16,9 +17,10 @@ export default function Home() {
 			<main className="flex items-center justify-center flex-1 w-full px-20 text-center flex-raw">
 				<Table />
 				<SideBar />
+				<Form />
 			</main>
 
-			<div className="remarking flex section display bg-blue-600">
+			<div className="flex bg-blue-600 remarking section display">
 				<div className="color bg-red-600 p-2 m-0.5">
 					<Tracking day="Monday" time={eleven} subject="Math" />
 				</div>
