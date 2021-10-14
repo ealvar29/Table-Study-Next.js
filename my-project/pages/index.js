@@ -8,41 +8,59 @@ import { Form } from '../components/Form';
 export default function Home() {
 	let eleven = `${11}:${45}`;
 
-	let days = [
-		'Monday',
-		'Tuesday',
-		'Wednesday',
-		'Thursday',
-		'Friday',
-		'Saturday',
-		'Sunday',
-	];
-	let subjects = 'Maths';
+	// let days = [
+	// 	'Monday',
+	// 	'Tuesday',
+	// 	'Wednesday',
+	// 	'Thursday',
+	// 	'Friday',
+	// 	'Saturday',
+	// 	'Sunday',
+	// ];
+	// let subjects = 'Maths';
+
+	// let trackingArray = [
+	// 	{
+	// 		index: 1,
+	// 		day: days,
+	// 		time: eleven,
+	// 		subject: subjects,
+	// 	},
+	// ];
 
 	let trackingArray = [
 		{
 			index: 1,
-			day: days,
-			time: eleven,
-			subject: subjects,
+			day: 'Monday',
+			subject: 'Math',
+			time: new Date().toLocaleString()
 		},
-	];
+		{
+			index: 2,
+			day: 'Tuesday',
+			subject: 'Science',
+			time: new Date().toLocaleString()
+		},
+		// {
+		// 	 keep going until you have all objects in the same format -- Wednesday, Thursday, etc
+		// },
+	]
 
 	let remarksArray = [
 		{
 			index: 1,
 			subject: 'English',
-			remark: 'Please reread the last chapter',
+			remark: 'Please reread the last chapter'
 		},
 		{
 			index: 2,
 			subject: 'Science',
-			remark: 'Please go over Astrology',
+			remark: 'Please go over Astrology'
 		},
 		{
 			index: 3,
 			subject: 'Math',
-			remark: 'Please complete lessons 1-5',
+			remark: 'Please complete lessons 1-5'
 		},
 	];
 
@@ -63,7 +81,7 @@ export default function Home() {
 				{
 					<div className="color bg-red-600 p-2 m-0.5">
 						{trackingArray.map((tracking, index) => (
-							<tracking
+							<Tracking
 								key={index}
 								day={tracking.day}
 								time={tracking.time}
