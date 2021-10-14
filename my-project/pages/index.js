@@ -7,6 +7,27 @@ import { Form } from '../components/Form';
 
 export default function Home() {
 	let eleven = `${11}:${45}`;
+	let remarksArray = [
+		{	
+			index: 1,
+			subject: 'English',
+			remark: 'Please reread the last chapter'
+		},
+		{
+			index: 2,
+			subject: 'Science',
+			remark: 'Please go over Astrology'
+		},
+		{
+			index: 3,
+			subject: 'Math',
+			remark: 'Please complete lessons 1-5'
+		}
+	];
+
+
+
+
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen py-2">
 			<Head>
@@ -21,7 +42,7 @@ export default function Home() {
 			</main>
 
 			<div className="flex bg-blue-600 remarking section display">
-				<div className="color bg-red-600 p-2 m-0.5">
+				{/* <div className="color bg-red-600 p-2 m-0.5">
 					<Tracking day="Monday" time={eleven} subject="Math" />
 				</div>
 
@@ -33,9 +54,11 @@ export default function Home() {
 				</div>
 				<div className="color bg-red-600 p-2 m-0.5">
 					<Tracking day="Saturday" time={'4:00'} subject="Geography" />
-				</div>
+				</div> */}
 				<div className="color bg-red-600 p-2 m-0.5">
-					<Remarks subject="English" remark="Please reread the last chapter" />
+					{remarksArray.map((remark, index) => (
+						<Remarks key={index} subject={remark.subject} remark={remark.remark} />
+					))}
 				</div>
 			</div>
 		</div>
