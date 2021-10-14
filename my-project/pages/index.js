@@ -7,26 +7,44 @@ import { Form } from '../components/Form';
 
 export default function Home() {
 	let eleven = `${11}:${45}`;
+
+	let days = [
+		'Monday',
+		'Tuesday',
+		'Wednesday',
+		'Thursday',
+		'Friday',
+		'Saturday',
+		'Sunday',
+	];
+	let subjects = 'Maths';
+
+	let trackingArray = [
+		{
+			index: 1,
+			day: days,
+			time: eleven,
+			subject: subjects,
+		},
+	];
+
 	let remarksArray = [
-		{	
+		{
 			index: 1,
 			subject: 'English',
-			remark: 'Please reread the last chapter'
+			remark: 'Please reread the last chapter',
 		},
 		{
 			index: 2,
 			subject: 'Science',
-			remark: 'Please go over Astrology'
+			remark: 'Please go over Astrology',
 		},
 		{
 			index: 3,
 			subject: 'Math',
-			remark: 'Please complete lessons 1-5'
-		}
+			remark: 'Please complete lessons 1-5',
+		},
 	];
-
-
-
 
 	return (
 		<div className="flex flex-col items-center justify-center min-h-screen py-2">
@@ -42,10 +60,19 @@ export default function Home() {
 			</main>
 
 			<div className="flex bg-blue-600 remarking section display">
-				{/* <div className="color bg-red-600 p-2 m-0.5">
-					<Tracking day="Monday" time={eleven} subject="Math" />
-				</div>
+				{
+					<div className="color bg-red-600 p-2 m-0.5">
+						{trackingArray.map((tracking, index) => (
+							<tracking
+								key={index}
+								day={tracking.day}
+								time={tracking.time}
+								subject={tracking.subject}
+							/>
+						))}
+					</div>
 
+					/* 
 				<div className="color bg-red-600 p-2 m-0.5">
 					<Tracking day="Wednesday" time={'5'} subject="English" />
 				</div>
@@ -54,10 +81,15 @@ export default function Home() {
 				</div>
 				<div className="color bg-red-600 p-2 m-0.5">
 					<Tracking day="Saturday" time={'4:00'} subject="Geography" />
-				</div> */}
+				</div> */
+				}
 				<div className="color bg-red-600 p-2 m-0.5">
 					{remarksArray.map((remark, index) => (
-						<Remarks key={index} subject={remark.subject} remark={remark.remark} />
+						<Remarks
+							key={index}
+							subject={remark.subject}
+							remark={remark.remark}
+						/>
 					))}
 				</div>
 			</div>
