@@ -17,12 +17,26 @@ import React from 'react';
 
 // Destructuring
 function Tracking({ day, time, subject }) {
+	let isLoggedIn = false;
+
 	return (
 		<div className="bg-blue-400 color">
 			<div>
+				{/* Ternary Operator */}
+				{isLoggedIn ? 
 				<h1 className="text-xl font-bold bg-red-500 color">
 					Day: {day}
-				</h1>
+				</h1> : "No day to show"
+				}
+
+				{/* 
+					if(isShowing)
+					{
+						"The day is showing"
+					} else {
+						"No day to show"
+					}
+				 */}
 			</div>
 
 			<div className="">

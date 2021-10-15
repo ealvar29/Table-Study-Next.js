@@ -90,17 +90,6 @@ export default function Home() {
 							<Tracking day={tracking.day} time={tracking.time} subject={tracking.subject}/>
 						))}
 					</div>
-
-					/* 
-				<div className="color bg-red-600 p-2 m-0.5">
-					<Tracking day="Wednesday" time={'5'} subject="English" />
-				</div>
-				<div className="color bg-red-600 p-2 m-0.5">
-					<Tracking day="Friday" time={'8:30'} subject="History" />
-				</div>
-				<div className="color bg-red-600 p-2 m-0.5">
-					<Tracking day="Saturday" time={'4:00'} subject="Geography" />
-				</div> */
 				}
 				<div /*className="color bg-red-600 p-2 m-0.5"*/>
 					{remarksArray.map((remark, index) => (
