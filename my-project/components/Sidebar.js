@@ -1,5 +1,6 @@
 import React from 'react';
 import { BeakerIcon } from '@heroicons/react/solid';
+import { Form } from '../components/Form';
 
 function SideBar() {
 	let activitiesArray = [
@@ -261,6 +262,7 @@ function SideBar() {
 							<p>{acts.activity}</p>
 						</div>
 					))}
+					<Form />
 				</div>
 			</div>
 		</div>

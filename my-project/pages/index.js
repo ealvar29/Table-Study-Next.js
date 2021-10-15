@@ -3,64 +3,67 @@ import Table from '../components/Table';
 import SideBar from '../components/Sidebar';
 import Tracking from '../components/Tracking';
 import Remarks from '../components/Remarks';
-import { Form } from '../components/Form';
+import Testing from '../components/Testing';
+// import { Form } from '../components/Form';
 
 export default function Home() {
-	let eleven = `${11}:${45}`;
-
-	// let days = [
-	// 	'Monday',
-	// 	'Tuesday',
-	// 	'Wednesday',
-	// 	'Thursday',
-	// 	'Friday',
-	// 	'Saturday',
-	// 	'Sunday',
-	// ];
-	// let subjects = 'Maths';
-
-	// let trackingArray = [
-	// 	{
-	// 		index: 1,
-	// 		day: days,
-	// 		time: eleven,
-	// 		subject: subjects,
-	// 	},
-	// ];
-
 	let trackingArray = [
 		{
-			index: 1,
+			// index: 1,
 			day: 'Monday',
 			subject: 'Math',
-			time: new Date().toLocaleString()
+			time: new Date().toLocaleString(),
 		},
 		{
-			index: 2,
+			// index: 2,
 			day: 'Tuesday',
 			subject: 'Science',
-			time: new Date().toLocaleString()
+			time: new Date().toLocaleString(),
+		},
+		{
+			// index: 3,
+			day: 'Wednesday',
+			subject: 'English',
+			time: new Date().toLocaleString(),
+		},
+		{
+			// index: 4,
+			day: 'Thursday',
+			subject: 'History',
+			time: new Date().toLocaleString(),
+		},
+		{
+			// index: 5,
+			day: 'Friday',
+			subject: 'French',
+			time: new Date().toLocaleString(),
+		},
+		{
+			// index: 6,
+			day: 'Saturday',
+			subject: 'Project',
+			time: new Date().toLocaleString(),
 		},
 		// {
 		// 	 keep going until you have all objects in the same format -- Wednesday, Thursday, etc
 		// },
-	]
+	];
 
 	let remarksArray = [
 		{
 			index: 1,
 			subject: 'English',
-			remark: 'Please reread the last chapter'
+			remark: 'Please reread the last chapter',
 		},
 		{
 			index: 2,
 			subject: 'Science',
-			remark: 'Please go over Astrology'
+			remark: 'Please go over Astrology',
 		},
 		{
 			index: 3,
 			subject: 'Math',
-			remark: 'Please complete lessons 1-5'
+			remark: 'Please complete lessons 1-5',
 		},
 	];
 
@@ -74,19 +77,30 @@ export default function Home() {
 			<main className="flex items-center justify-center flex-1 w-full px-20 text-center flex-raw">
 				<Table />
 				<SideBar />
-				<Form />
+				{/* <Form /> */}
 			</main>
 
-			<div className="flex bg-blue-600 remarking section display">
+			<Tracking />
+			{/* <Testing /> */}
+
+			<div /*className="flex bg-blue-600 remarking section display"*/>
 				{
-					<div className="color bg-red-600 p-2 m-0.5">
-						{trackingArray.map((tracking, index) => (
-							<Tracking
-								key={index}
-								day={tracking.day}
-								time={tracking.time}
-								subject={tracking.subject}
-							/>
+					<div /*className="color bg-red-600 p-2 m-0.5"*/>
+						{trackingArray.map((tracking) => (
+							<div className=" color bg-blue-400 ">
+								<div>
+									<h1 className="text-xl font-bold color bg-red-500">
+										{tracking.day}
+									</h1>
+								</div>
+
+								<div className="">
+									<h4 className="text-md font-medium">{tracking.subject}</h4>
+								</div>
+								<div className="">
+									<h4 className="italic">{tracking.time}</h4>
+								</div>
+							</div>
 						))}
 					</div>
 
@@ -101,7 +115,7 @@ export default function Home() {
 					<Tracking day="Saturday" time={'4:00'} subject="Geography" />
 				</div> */
 				}
-				<div className="color bg-red-600 p-2 m-0.5">
+				<div /*className="color bg-red-600 p-2 m-0.5"*/>
 					{remarksArray.map((remark, index) => (
 						<Remarks
 							key={index}

@@ -19,9 +19,9 @@ import React from 'react';
 function Tracking({ day, time, subject }) {
 	return (
 		<div>
-			<h1 className="font-bold">Day: {day}</h1>
+			{/* <h1 className="font-bold">Day: {day}</h1>
 			<h2>Time: {time}</h2>
-			<h3>Subject: {subject}</h3>
+			<h3>Subject: {subject}</h3> */}
 		</div>
 	);
 }
