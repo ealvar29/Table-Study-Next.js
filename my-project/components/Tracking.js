@@ -18,10 +18,19 @@ import React from 'react';
 // Destructuring
 function Tracking({ day, time, subject }) {
 	return (
-		<div>
-			{/* <h1 className="font-bold">Day: {day}</h1>
-			<h2>Time: {time}</h2>
-			<h3>Subject: {subject}</h3> */}
+		<div className="bg-blue-400 color">
+			<div>
+				<h1 className="text-xl font-bold bg-red-500 color">
+					Day: {day}
+				</h1>
+			</div>
+
+			<div className="">
+				<h4 className="font-medium text-md">Subject: {subject}</h4>
+			</div>
+			<div className="">
+				<h4 className="italic">Time: {time}</h4>
+			</div>
 		</div>
 	);
 }

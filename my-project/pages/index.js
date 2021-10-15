@@ -80,27 +80,14 @@ export default function Home() {
 				{/* <Form /> */}
 			</main>
 
-			<Tracking />
+			
 			{/* <Testing /> */}
 
 			<div /*className="flex bg-blue-600 remarking section display"*/>
 				{
 					<div /*className="color bg-red-600 p-2 m-0.5"*/>
 						{trackingArray.map((tracking) => (
-							<div className=" color bg-blue-400 ">
-								<div>
-									<h1 className="text-xl font-bold color bg-red-500">
-										{tracking.day}
-									</h1>
-								</div>
-
-								<div className="">
-									<h4 className="text-md font-medium">{tracking.subject}</h4>
-								</div>
-								<div className="">
-									<h4 className="italic">{tracking.time}</h4>
-								</div>
-							</div>
+							<Tracking day={tracking.day} time={tracking.time} subject={tracking.subject}/>
 						))}
 					</div>
 
